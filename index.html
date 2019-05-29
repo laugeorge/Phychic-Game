@@ -7,50 +7,14 @@
 
 <body>
 
-    <div>
         <h1>The Psychic Game</h1>
         <p>Guess what letter I'm thinking of</p>
-        <p id="wins-text"></p>
-        <p id="losses-text"></p>
-        <p id="guess-Left"></p>
-        <p id="user-guess"></p>
-    </div>
+        <p>Wins: <span id="wins-text">0</span></p>
+        <p>Losses: <span id="losses-text">0</span></p>
+        <p>Guesses Left: <span id="guess-left">9</span></p>
+        <p>Your Guesses so far: <span id="user-guess"></span></p>
 
-    <script type="text/javascript">
-        // Create computer choices
-        var computerChoices = ["a","b","c","d","e","f","g","h","i","k","l","m","n","o","p","q","r","s","t","u","v","x","y","z"];
-
-        // Create variables to hold wins, losses, guesses left
-        var wins = 0;
-        var losses = 0;
-        var guessLeft = 9;
-        var userGuess =[];
-
-
-        //Crate variables that hold references 
-        var winsText = document.getElementById("wins-text");
-        var lossesText = document.getElementById("losses-text");
-        var guessLeftText = document.getElementById("guess-Left");
-        var userGuessText = document.getElementById("user-guess");
-
-        // Display the user guesses, wins/losses
-        winsText.textContent = "Wins: " + wins;
-        lossesText.textContent = "Losses: " + losses;
-        guessLeftText.textContent = "Guesses Left: " + guessLeft;
-        userGuessText.textContent = "Your guesses so far: " + userGuess;
-
-        // This function is run whenever the user presses a key.
-        document.onkeyup = function(event) {
-
-        //Dettermine which key was pressed.
-        var userGuess = event.key.toLowerCase();
-
-        // Computer randomly pick an array
-        var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-
-        }
-    
-    </script>
+    <script type="text/javascript" src="javascript.js"></script>
 
 </body>
 
